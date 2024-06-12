@@ -112,13 +112,16 @@
   text-decoration: none;
   padding: 10px;
 }
-
+.tendencias-cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 40px;
+}
 .movie_card{
   position: relative;
-  display: block;
   width: 800px;
   height: 350px;
-  margin: 80px auto; 
+  margin: 40px auto; 
   overflow: hidden;
   border-radius: 10px;
   transition: all 0.4s;
@@ -137,11 +140,16 @@
     border-radius: 10px;
     .movie_header{
       position: relative;
-      padding: 25px;
-      height: 40%;
+      padding: 25px 0 0 25px;
+      height: 50%;
       h1{
+        height: 60px;
         color: black;
         font-weight: 400;
+        line-height: 0.8;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       h4{
         margin: 0;
@@ -150,30 +158,44 @@
       }
       .minutes{
         display: inline-block;
-        margin-top: 15px;
+        margin-top: 5px;
         color: #555;
-        padding: 5px;
+        padding: 1px 5px;
         border-radius: 5px;
         border: 1px solid rgba(0,0,0,0.05);
       }
       .type{
-        display: inline-block;
-        color: #959595;
+        display: block;
+        color: #494949;
         margin-left: 10px;
+        font-size: 1.2rem;
+        font-weight: 500;
       }
       .locandina{
         position: relative;
         float: left;
         margin-right: 20px;
-        height: 120px;
+        height: 150px;
         box-shadow: 0 0 20px -10px rgba(0,0,0,0.5);
       }
     }
     .movie_desc{
-      padding: 25px;
-      height: 50%;
+      padding: 10px 25px;
+      height: 70%;
       .text{
         color: #545454;
+        height: 60%;
+        font-size: 1.3rem;
+        overflow-y: scroll;
+  
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #e0e0e0;
+          border-radius: 10px;
+        }
+
       }
     }
     .movie_social{
@@ -205,36 +227,16 @@
     position: absolute;
     top: 0;
     z-index: 1;
-    width: 500px;
-    height: 100%; right: 0;
-    background-size: cover;
+    right: 0;
     border-radius: 11px;
+    img {
+      position: absolute;
+      right: 0;
+      top: -50px;
+      border-radius: 11px;
+    }
   }
 }
-/**---- IMAGENES ---- */
-.bright_back{
-  background: url("https://es.web.img3.acsta.net/pictures/21/08/25/14/35/3349802.jpg");
-} /* DUNE */
-
-.tomb_back{
-  background: url("https://e00-marca.uecdn.es/assets/multimedia/imagenes/2024/03/01/17093229076209.jpg");
-}/* DUNE 2 */
-
-.ave_back{
-    background: url("https://pics.filmaffinity.com/the_godfather-488102675-mmed.jpg");
-}/* EL PADRINO */
-
-.nueve_back{
-  background: url("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/WAIMDDPU2ZDL7FB62INBQA6PZY.jpg");
-}/* NUEVE REINAS */
-
-.inte_back{
-  background: url("https://i.blogs.es/ad7f07/interstellar-ap/840_560.jpeg");/* INTERESTELLAR */
-}
-
-.open_back{
-  background: url("https://hips.hearstapps.com/hmg-prod/images/cillian-murphy-oppenheimer-65f0869834793.jpg?crop=1xw:1xh;center,top&resize=1200:*");
-}/* OPPENHEIMER */
 
 /*--------- ACLAMADAS --------*/
 
