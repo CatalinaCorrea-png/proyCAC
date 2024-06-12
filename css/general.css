@@ -23,9 +23,10 @@ a {
 
 }
 hr {
-  height: 3px;
+  height: 4px;
   width: initial;
-  background-color: var(--primario); /*rgb(63, 29, 90)*/
+  /* background-color: var(--primario); */
+  background-color: rgb(76, 48, 99); 
   margin: 0 200px;
   border-radius: 10px;
   border: none;
